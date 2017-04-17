@@ -1,0 +1,8 @@
+<div class="item">
+    <div (click)="getCheese()" class="ui primary button">{{title}}</div>
+</div>
+<ul class="cheeses">
+  <li *ngFor="let cheese of cheeses">
+    {{cheese.name}}
+  </li>
+</ul>

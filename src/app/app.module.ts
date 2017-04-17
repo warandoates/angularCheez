@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GetAllCheeseBtnComponent } from './get-all-cheese-btn/get-all-cheese-btn.component';
+import { SearchCheeseNameComponent } from './search-cheese-name/search-cheese-name.component';
+import { AllCheeseService } from './get-all-cheese-btn/getCheesesService'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    GetAllCheeseBtnComponent,
+    SearchCheeseNameComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AllCheeseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
