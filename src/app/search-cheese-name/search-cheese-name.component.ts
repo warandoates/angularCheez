@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { AllCheeseService } from '../get-all-cheese-btn/getCheesesService'
+import { CheeseResult} from '../get-all-cheese-btn/cheese.model'
+
 
 @Component({
   selector: 'app-search-cheese-name',
   templateUrl: './search-cheese-name.component.html',
-  styleUrls: ['./search-cheese-name.component.css']
+  styleUrls: ['./search-cheese-name.component.css'],
+  providers: [AllCheeseService]
 })
 export class SearchCheeseNameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private allCheeseService: AllCheeseService) { }
 
   ngOnInit() {
   }
-
+  getCheeseResults(query): void {
+    this.allCheeseService
+      .getCheeseByName(query)
+  }
 }

@@ -1,3 +1,9 @@
-<p>
-  search-cheese-name works!
-</p>
+<form (submit)="getCheeseResults(cheese.value)">
+<div class="ui search">
+  <div class="ui icon input">
+    <input class="form-control" #cheese type="text" placeholder="Search by Cheese Name">
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
+</div>
+</form>
