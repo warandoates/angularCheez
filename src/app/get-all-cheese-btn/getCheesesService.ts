@@ -22,6 +22,6 @@ export class AllCheeseService {
     return this.http.get(`http://cheeswhiz.herokuapp.com/api/cheese/specific/${term}`)
       .toPromise()
       .then(res => res.json())
-      .then(res => console.log(res))
+      // .then(res => console.log(res))
   }
 }
