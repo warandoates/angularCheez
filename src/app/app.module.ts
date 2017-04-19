@@ -7,14 +7,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GetAllCheeseBtnComponent } from './get-all-cheese-btn/get-all-cheese-btn.component';
 import { SearchCheeseNameComponent } from './search-cheese-name/search-cheese-name.component';
-import { AllCheeseService } from './get-all-cheese-btn/getCheesesService'
+import { AllCheeseService } from './get-all-cheese-btn/getCheesesService';
+
+import { ResultTableComponent } from './result-table/result-table.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GetAllCheeseBtnComponent,
-    SearchCheeseNameComponent
+    SearchCheeseNameComponent,
+    ResultTableComponent
   ],
   imports: [
     BrowserModule,

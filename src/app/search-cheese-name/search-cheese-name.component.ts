@@ -7,10 +7,10 @@ import { CheeseResult} from '../get-all-cheese-btn/cheese.model'
   selector: 'app-search-cheese-name',
   templateUrl: './search-cheese-name.component.html',
   styleUrls: ['./search-cheese-name.component.css'],
-  providers: [AllCheeseService]
+  // providers: [AllCheeseService]
 })
 export class SearchCheeseNameComponent implements OnInit {
-  cheeses: CheeseResult;
+  // cheeses: CheeseResult;
   constructor(private allCheeseService: AllCheeseService) { }
 
   ngOnInit() {
@@ -18,6 +18,6 @@ export class SearchCheeseNameComponent implements OnInit {
   getCheeseResults(query): void {
     this.allCheeseService
       .getCheeseByName(query)
-      .then(cheeses => this.cheeses = cheeses)
+      // .then(cheeses => this.cheeses = cheeses)
   }
 }

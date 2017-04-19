@@ -1,24 +1,3 @@
 <div class="item">
     <div (click)="getCheese()" class="ui primary button">{{title}}</div>
 </div>
-<!-- <ul class="cheeses">
-  <li *ngFor="let cheese of cheeses">
-    {{cheese.name}}
-  </li>
-</ul> -->
-
-
-<table *ngIf="cheeses" class="ui celled table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Animal</th>
-      <th>Firmness</th>
-    </tr>
-  </thead>
-  <tr *ngFor="let cheese of cheeses">
-    <td>{{cheese.name}}</td>
-    <td>{{cheese.animal}}</td>
-    <td>{{cheese.firmness}}</td>
-  </tr>
-</table>
