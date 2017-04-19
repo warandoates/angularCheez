@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AllCheeseService } from './getCheesesService'
-import { CheeseResult} from './cheese.model'
+// import { CheeseResult} from './cheese.model'
 
 
 @Component({
@@ -10,7 +10,7 @@ import { CheeseResult} from './cheese.model'
 })
 export class GetAllCheeseBtnComponent implements OnInit {
   title = 'This is getAllCheeseButton'
-  cheeses: CheeseResult[];
+  // cheeses: CheeseResult[];
   // @Input() valueToPass = GetAllCheeseBtnComponent.cheeses
 // @Input ()
   constructor(private allCheeseService: AllCheeseService) { }
