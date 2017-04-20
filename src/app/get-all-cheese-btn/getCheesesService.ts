@@ -1,35 +1,30 @@
-import { Injectable } from '@angular/core'
-import { Headers, Http } from '@angular/http'
+import { Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
 
-import { CheeseResult} from './cheese.model'
+import { CheeseResult} from './cheese.model';
 
 import 'rxjs/add/operator/toPromise';
 
 
 @Injectable()
 export class AllCheeseService {
-  results: CheeseResult[]
+  results: CheeseResult[];
+  public headers = new Headers({'Content-Type': 'application/json'});
 
+  constructor(public http: Http) { }
 
-  private headers = new Headers({'Content-Type': 'application/json'});
-  private allCheeseUrl = `http://cheeswhiz.herokuapp.com/api/cheese`
-
-  constructor(private http: Http) {
-
-  }
   getAllCheese (): Promise<CheeseResult[]> {
-    return this.http.get(this.allCheeseUrl)
+    return this.http.get(`http://cheeswhiz.herokuapp.com/api/cheese`)
       .toPromise()
       .then(res => res.json())
-      .then(res => this.results = res)
+      .then(res => this.results = res);
   }
 
   getCheeseByName(query: string): Promise<CheeseResult> {
     return this.http.get(`http://cheeswhiz.herokuapp.com/api/cheese/specific/${query}`)
       .toPromise()
       .then(res => res.json())
-      .then(res => this.results = res)
-      // .then(res => console.log(res))
+      .then(res => this.results = res);
   }
 
 }

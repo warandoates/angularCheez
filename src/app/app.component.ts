@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AllCheeseService } from './get-all-cheese-btn/getCheesesService'
+import { AllCheeseService } from './get-all-cheese-btn/getCheesesService';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,6 @@ import { AllCheeseService } from './get-all-cheese-btn/getCheesesService'
 export class AppComponent {
   title = 'app works!';
 
-constructor() { }
+  constructor() { }
 
 }

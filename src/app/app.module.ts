@@ -11,7 +11,7 @@ import { SearchCheeseNameComponent } from './search-cheese-name/search-cheese-na
 import { AllCheeseService } from './get-all-cheese-btn/getCheesesService';
 import { ResultTableComponent } from './result-table/result-table.component';
 import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './signup/signup.component'
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
