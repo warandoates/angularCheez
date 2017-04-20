@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AllCheeseService } from '../get-all-cheese-btn/getCheesesService'
 import { CheeseResult} from '../get-all-cheese-btn/cheese.model'
+import { Router } from '@angular/router'
+
 
 
 @Component({
@@ -11,13 +13,14 @@ import { CheeseResult} from '../get-all-cheese-btn/cheese.model'
 })
 export class SearchCheeseNameComponent implements OnInit {
   // cheeses: CheeseResult;
-  constructor(private allCheeseService: AllCheeseService) { }
+  constructor(private allCheeseService: AllCheeseService, private router: Router) { }
 
   ngOnInit() {
   }
   getCheeseResults(query): void {
     this.allCheeseService
       .getCheeseByName(query)
+      .then(() => this.router.navigate(['/results']))
       // .then(cheeses => this.cheeses = cheeses)
   }
 }
