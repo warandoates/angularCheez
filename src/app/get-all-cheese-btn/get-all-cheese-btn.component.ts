@@ -9,10 +9,8 @@ import { AllCheeseService } from './getCheesesService'
   styleUrls: ['./get-all-cheese-btn.component.css']
 })
 export class GetAllCheeseBtnComponent implements OnInit {
-  title = 'This is getAllCheeseButton'
-  // cheeses: CheeseResult[];
-  // @Input() valueToPass = GetAllCheeseBtnComponent.cheeses
-// @Input ()
+  title = 'See All Cheeses'
+
   constructor(private allCheeseService: AllCheeseService) { }
 
   ngOnInit() {

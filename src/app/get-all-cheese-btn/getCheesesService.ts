@@ -10,6 +10,7 @@ import 'rxjs/add/operator/toPromise';
 export class AllCheeseService {
   results: CheeseResult[]
 
+
   private headers = new Headers({'Content-Type': 'application/json'});
   private allCheeseUrl = `http://cheeswhiz.herokuapp.com/api/cheese`
 
