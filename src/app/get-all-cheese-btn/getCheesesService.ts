@@ -14,14 +14,14 @@ export class AllCheeseService {
   constructor(public http: Http) { }
 
   getAllCheese (): Promise<CheeseResult[]> {
-    return this.http.get(`http://cheeswhiz.herokuapp.com/api/cheese`)
+    return this.http.get(`https://cheeswhiz.herokuapp.com/api/cheese`)
       .toPromise()
       .then(res => res.json())
       .then(res => this.results = res);
   }
 
   getCheeseByName(query: string): Promise<CheeseResult> {
-    return this.http.get(`http://cheeswhiz.herokuapp.com/api/cheese/specific/${query}`)
+    return this.http.get(`https://cheeswhiz.herokuapp.com/api/cheese/specific/${query}`)
       .toPromise()
       .then(res => res.json())
       .then(res => this.results = res);
