@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
-import { CheeseResult} from './cheese.model';
+import { CheeseResult} from '../models/cheese.model';
 
 import 'rxjs/add/operator/toPromise';
 

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AllCheeseService } from './getCheesesService';
+import { AllCheeseService } from '../../services/getCheesesService';
 
 @Component({
   selector: 'app-get-all-cheese-btn',
